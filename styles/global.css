@@ -1,0 +1,119 @@
+:root {
+    --blue: #080A57;
+    --yellow: #FAFF00;
+    --grey: #C4C4C4;
+}
+
+body,
+html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+}
+
+header {
+    background-color: var(--blue);
+    height: 80px;
+    color: white;
+    padding: 0 20px;
+    display: table;
+    width: 100%;
+    position: relative;
+
+}
+
+header>* {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+header a {
+    position: relative;
+    margin-left: 20px;
+}
+
+header img, header a {
+    height: 80px;
+    width: 80px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+header ul {
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    gap: 20px;
+}
+
+header ul li {
+    cursor: pointer;
+    display: inline;
+    margin-left: 20px;
+}
+
+header ul li:nth-child(1) {
+    margin-left: 0;
+}
+
+.menu-item.active {
+    text-decoration: underline;
+}
+
+main {
+    margin: 0 20px;
+}
+footer {
+    position: relative;
+    background-color: var(--blue);
+    margin-top: 50px;
+    height: 80px;
+    color: white;
+    font-size: large;
+    text-align: center;
+    line-height: 80px;
+}
+
+.button {
+    background-color: var(--yellow);
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+}
+.genres {
+    margin: 5px 0;
+}
+
+.genre {
+    background-color: var(--grey);
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: default;
+}
+aside {
+    background: linear-gradient(-45deg, #ee7752, #48363d, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+    padding: 10px 0;
+}
+
+aside img {
+    height: 40px;
+}
+aside marquee > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
