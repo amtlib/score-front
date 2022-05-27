@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Score</title>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><img src="assets/logo.png" alt="score logo" /></a>
+        <ul class="menu" id="header-menu">
+            <li class="menu-item"><a href="/">gry</a></li>
+        </ul>
+        <div id="user-container"></div>
+    </header>
+    
+    <div id="alert"></div>
+    <main>
+        <h2>Gry</h2>
+        <table id="games-admin-table">
+            <thead>
+                    <th>nazwa</th>
+                    <th>producent</th>
+                    <th>obrazek</th>
+                    <th>opis</th>
+                    <th>data wydania</th>
+                    <th>kategorie</th>
+                    <th>platformy</th>
+                    <th>screeny</th>
+                    <th>usuń</th>
+                    <th>zapisz</th>
+                </th>
+
+            <tbody id="games-admin-tbody">
+
+            </tbody>
+        </table>
+        <button class="button" id="add-new-game">Dodaj nową</button>
+
+        <h2>Uzytkownicy</h2>
+
+        <table id="users-admin-table">
+            <thead>
+                    <th>email</th>
+                    <th>rola</th>
+                    <th>usuń</th>
+                    <th>zapisz</th>
+                </th>
+
+            <tbody id="users-admin-tbody">
+
+            </tbody>
+        </table>
+    </main>
+   
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+
+</html>

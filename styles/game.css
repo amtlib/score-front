@@ -14,7 +14,8 @@
 }
 
 .game-image {
-    max-width: 100%;
+    width: 100%;
+
 }
 .game-name {
     color: var(--blue);
@@ -59,6 +60,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.screenshots-grid img {
+    width: 100%;
 }
 
 h2 {

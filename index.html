@@ -12,13 +12,11 @@
 
 <body>
     <header>
-        <a href="/"><img src="assets/logo.png" alt="score logo" /></a>
-        <ul class="menu">
-            <li class="menu-item active">gry</li>
-            <li class="menu-item">
-                moje ulubione
-            </li>
+        <a href="/" class="logo"><img src="assets/logo.png" alt="score logo" /></a>
+        <ul class="menu" id="header-menu">
+            <li class="menu-item"><a href="/">gry</a></li>
         </ul>
+        <div id="user-container"></div>
     </header>
     <aside>
         <marquee>
@@ -27,105 +25,30 @@
             </div>
         </marquee>
     </aside>
+    <div id="alert"></div>
     <main>
-        <h1 class="section-name">Najnowsze gry</h1>
-        <div class="cards">
-            <a href="#" class="card">
-                <img src="assets/gtav.jpeg" alt="Grand Theft Auto V" />
-                <h2>Grand Theft Auto V</h2>
-                <div class="genres">
-                    <div class="genre">Akcji</div>
-                    <div class="genre">Przygodowe</div>
-                </div>
-
-                <h3 class="release-date">2013-09-17</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem, in unde quo voluptatibus
-                    cupiditate harum accusantium pariatur excepturi quas.</p>
-            </a>
-            <a href="#" class="card">
-                <img src="assets/witcher3.jpeg" alt="The Witcher 3: Wild Hunt" />
-                <h2>The Witcher 3: Wild Hunt</h2>
-                <div class="genres">
-                    <div class="genre">RPG</div>
-                    <div class="genre">Fantasy</div>
-                </div>
-
-                <h3 class="release-date">2015-05-18</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem, in unde quo voluptatibus
-                    cupiditate harum accusantium pariatur excepturi quas.</p>
-            </a>
-            <a href="#" class="card">
-                <div class="image-wrapper">
-                    <img src="assets/portal2.jpeg" alt="Portal 2" />
-                </div>
-                <h2>Portal 2</h2>
-                <div class="genres">
-                    <div class="genre">Kosmos</div>
-                    <div class="genre">Logiczne</div>
-                </div>
-
-                <h3 class="release-date">2011-04-18</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem, in unde quo voluptatibus
-                    cupiditate harum accusantium pariatur excepturi quas.</p>
-            </a>
-            <a href="#" class="card">
-                <div class="image-wrapper">
-                    <img src="assets/tombrider.jpeg" alt="Tomb Raider (2013)" />
-                </div>
-                <h2>Tomb Raider (2013)</h2>
-                <div class="genres">
-                    <div class="genre">Przygodowe</div>
-                    <div class="genre">Akcji</div>
-                </div>
-
-                <h3 class="release-date">2013-03-05</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem, in unde quo voluptatibus
-                    cupiditate harum accusantium pariatur excepturi quas.</p>
-            </a>
-            <a href="#" class="card">
-                <div class="image-wrapper">
-                    <img src="assets/tombrider.jpeg" alt="Tomb Raider (2013)" />
-                </div>
-                <h2>Tomb Raider (2013)</h2>
-                <div class="genres">
-                    <div class="genre">Przygodowe</div>
-                    <div class="genre">Akcji</div>
-                </div>
-
-                <h3 class="release-date">2013-03-05</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem, in unde quo voluptatibus
-                    cupiditate harum accusantium pariatur excepturi quas.</p>
-            </a>
+        <div class="card-header">
+            <h1 class="section-name">Najnowsze gry</h1>
+            <select id="platform-select">
+                <option value="all" selected>wszystkie</option>
+                <option value="pc">PC</option>
+                <option value="ps4">PS4</option>
+                <option value="xbox-one">Xbox One</option>
+            </select>
         </div>
+        <div class="cards"></div>
     </main>
     <div class="modal-wrapper" id="modal-wrapper">
         <div class="modal-content">
             <button class="close" id="modal-close">x</button>
             <h2>Napisz swoją wiadomość</h2>
-            <div class="modal-form">
-                <input type="text" placeholder="twoje imię" />
-                <textarea rows="5" placeholder="twoja wiadomość"></textarea>
+            <form class="modal-form" id="modal-form">
+                <input type="text" name="guestName" placeholder="twoje imię" />
+                <textarea rows="5" name="entry" placeholder="twoja wiadomość"></textarea>
                 <button class="button">Wpisz się</button>
-            </div>
+            </form>
             <h2>Dotychczasowe wpisy</h2>
-            <div class="entries">
-                <p><strong>Dominik napisał(a):</strong> Super stronka, pozdrawiam serdecznie</p>
-                <p><strong>Agata napisał(a):</strong> To jest najlepsze, co się przydażyło internetowi przez ostatnie 20
-                    lat</p>
-                <p><strong>Kuba napisał(a):</strong> Sprzedam Opla tanio</p>
-                <p><strong>Dominik napisał(a):</strong> Super stronka, pozdrawiam serdecznie</p>
-                <p><strong>Agata napisał(a):</strong> To jest najlepsze, co się przydażyło internetowi przez ostatnie 20
-                    lat</p>
-                <p><strong>Kuba napisał(a):</strong> Sprzedam Opla tanio</p>
-                <p><strong>Dominik napisał(a):</strong> Super stronka, pozdrawiam serdecznie</p>
-                <p><strong>Agata napisał(a):</strong> To jest najlepsze, co się przydażyło internetowi przez ostatnie 20
-                    lat</p>
-                <p><strong>Kuba napisał(a):</strong> Sprzedam Opla tanio</p>
-                <p><strong>Dominik napisał(a):</strong> Super stronka, pozdrawiam serdecznie</p>
-                <p><strong>Agata napisał(a):</strong> To jest najlepsze, co się przydażyło internetowi przez ostatnie 20
-                    lat</p>
-                <p><strong>Kuba napisał(a):</strong> Sprzedam Opla tanio</p>
-            </div>
+            <div class="entries" id="entries"></div>
         </div>
     </div>
     <footer>
@@ -134,7 +57,10 @@
             księga gości
         </button>
     </footer>
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/header.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/loadGames.js"></script>
     <script src="scripts/scrollbar.js"></script>
 </body>
 
